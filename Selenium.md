@@ -1,7 +1,26 @@
 # QA Selenium Automation with Python
 
 ## Objective
-Create a Selenium automation script in Python to validate search functionality on the **Selenium Playground** website.
+#Create a Selenium automation script in Python to validate search functionality on the **Selenium Playground** website.
+
+from selenium import webdriver
+ 
+driver = webdriver.Chrome()
+ 
+# URL of the website 
+url = "https://www.lambdatest.com/selenium-playground/table-sort-search-demo"
+ 
+# Opening the URL 
+driver.get(url) 
+ 
+# Getting current URL source code 
+get_source = driver.page_source
+ 
+# Text you want to search
+search_text = "New York"
+ 
+# print True if text is present else False
+print(search_text in get_source)
 
 > [!NOTE]
 > **Deliverables:**
